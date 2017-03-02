@@ -1,0 +1,8 @@
+<%=
+Dir.foreach("/tmp/") do |x|
+  x = x.encode('utf-8')
+  if x  =~ /(\.pdf|\.txt)$/
+    puts "Got #{x}"
+  end
+end
+%>
